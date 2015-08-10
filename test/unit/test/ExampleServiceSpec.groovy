@@ -1,14 +1,15 @@
 package test
 
-import grails.test.mixin.Mock
-import grails.test.mixin.TestFor
+import grails.test.mixin.TestMixin
+import grails.test.mixin.gorm.Domain
+import grails.test.mixin.hibernate.HibernateTestMixin
 import spock.lang.Specification
 
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
-@TestFor(ExampleService)
-@Mock(Book)
+@Domain(Book)
+@TestMixin(HibernateTestMixin)
 class ExampleServiceSpec extends Specification {
 
     protected List data = []
